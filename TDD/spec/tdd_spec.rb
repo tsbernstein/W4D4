@@ -16,4 +16,18 @@ describe Array do
             expect(array.two_sum).to eq([[0,4], [2,3]])
         end
     end
+
+    describe "my_transpose" do
+        it "transposes an array" do
+            arr = [[0, 1, 2], [3, 4, 5], [6, 7, 8]]
+            expect(arr.my_transpose).to eq([[0, 3, 6], [1, 4, 7], [2, 5, 8]])
+        end
+    end
+end
+
+describe "stock_picker" do
+    it "finds the most profitable pair" do
+        arr = [["a", 100], ["b", 200], ["c", 50], ["d", 500], ["e", 400]]
+        expect(stock_picker(arr)).to eq([["c", 50], ["d", 500]])
+    end
 end

@@ -16,4 +16,16 @@ class Array
         end
         pairs
     end
+
+    def my_transpose
+        self.transpose
+    end
+end
+
+def stock_picker(arr)
+    (0...arr.length).each do |i|
+        if arr[i][1] < arr[i + 1][1]
+            << arr[i][1]
+        end 
+    end
 end
