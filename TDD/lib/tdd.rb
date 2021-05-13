@@ -22,34 +22,10 @@ class Array
     end
 end
 
-# def stock_picker(arr)
-#     least = []
-#     greatest = []
-#     (0...arr.length-1).each do |i|
-#         if arr[i][1] < arr[i + 1][1]
-#             least = arr[i]
-#         end 
-#     end
-#     least_index = arr.index(least)
-#     (least_index+1...arr.length-1).each do |i|
-#         if arr[i][1] > arr[i+1][1]
-#             greatest = arr[i]
-#         else
-#             greatest = arr[i+1]
-#         end
-#     end
-#     result = []
-#     result.push(least,greatest)
-#     return result
-# end
-
 def stock_picker(arr)
     least = 0
     greatest = 0
     greatest_difference = 0
-    # arr.each do |i|
-    #     least << arr[i][1]
-    # end
     (0...arr.length).each do |i|
         (1...arr.length).each do |j|
             if j > i && greatest_difference < arr[j][1] - arr[i][1] 
